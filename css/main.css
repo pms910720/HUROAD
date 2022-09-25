@@ -1,5 +1,6 @@
 /*COMMON*/
 body {
+  touch-action:pan-y;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -267,12 +268,12 @@ header .badges[data-touchable= 'true'] {
   display: none;
 }
 
-header .badges{
+header .badges.image:not([data-touchable= 'true']) {
   position: absolute;
   top: 132px;
   right: 12px;
 }
-header .badges .badge{
+header .badges .badge.image:not([data-touchable= 'true']) {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 12px;

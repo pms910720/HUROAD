@@ -30,9 +30,11 @@ checkTouchable();
 // 페이지 스크롤에 영향을 받는 요소들을 검색!
 const badgeEl = document.querySelector('header .badges')
 const toTopEl = document.querySelector('#to-top')
+
 // 페이지에 스크롤 이벤트를 추가!
 // 스크롤이 지나치게 자주 발생하는 것을 조절(throttle, 일부러 부하를 줌)
-if(!document.body.dataset.touchable){
+if(document.body.dataset.touchable == "true"){
+  alert("why");
   window.addEventListener('scroll', _.throttle(function () {
     // 페이지 스크롤 위치가 500px이 넘으면.
     if (window.scrollY > 500) {
@@ -59,6 +61,12 @@ if(!document.body.dataset.touchable){
       })
     }
   }, 300))
+}else{
+      // Badge 요소 숨기기!
+      gsap.to(badgeEl, 0, {
+        opacity: 0,
+        display: 'none'
+      })
 }
 
 // 상단으로 스크롤 버튼을 클릭하면,
