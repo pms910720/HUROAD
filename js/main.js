@@ -18,6 +18,10 @@
 //   searchInputEl.setAttribute('placeholder','');
 // });
 
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
 /**
  * 페이지 스크롤에 따른 요소 제어
  */
