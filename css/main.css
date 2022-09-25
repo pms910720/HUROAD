@@ -7,6 +7,7 @@ body {
   line-height: 1.4;
   color: #333;
   height: 100%;
+  width: 100%;
 }
 a {
   text-decoration: none;
@@ -17,18 +18,12 @@ img {
 }
 
 /*INNER*/
-.inner[data-touchable= 'true'] {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.inner:not([data-touchable= 'true']) {
+.inner{
+  touch-action:pan-y;
   width: 1100px;
   margin: 0 auto;
   position: relative;
-
+  overflow-x: hidden;
 }
 
 /*BUTTON*/
@@ -264,25 +259,6 @@ header .main-menu .item .item__contents .contents__texture p {
   margin: 4px 0 14px;
 }
 
-header .badges[data-touchable= 'true'] {
-  display: none;
-}
-
-header .badges.image:not([data-touchable= 'true']) {
-  position: absolute;
-  top: 132px;
-  right: 12px;
-}
-header .badges .badge.image:not([data-touchable= 'true']) {
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 12px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
-}
-
-
-
-
 /*VISUAL*/
 .visual {
   margin-top: 120px;
@@ -298,23 +274,17 @@ header .badges .badge.image:not([data-touchable= 'true']) {
   left: -10px;
 }
 
-.visual .succulent.image[data-touchable= 'true'] {
-  display: none;
-}
-
-.visual .succulent.image:not([data-touchable= 'true']) {
+.visual .succulent.image {
   position: absolute;
   bottom: 0;
   right: -67px;
 }
-.visual .cat.image:not([data-touchable= 'true']) {
+.visual .cat.image {
   position: absolute;
   bottom: 0;
-  right: -82px;
+  right: -0px;
 }
-.visual .cat.image[data-touchable= 'true'] {
-  display: none;
-}
+
 
 .visual .fade-in {
   opacity: 0;
@@ -586,6 +556,7 @@ footer {
   border-top: 1px solid #333;
 }
 footer .inner {
+  width: 100%;
   padding: 40px 0 60px 0;
 }
 footer .menu {
