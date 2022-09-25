@@ -330,6 +330,9 @@ header .main-menu .item .item__contents .contents__texture p {
   margin-right: 20px;
 }
 .notice .notice-line .inner__left .swiper-container {
+  -webkit-backface-visibility:hidden;
+	-webkit-transform:translateZ(0);
+	-webkit-transform:translate3d(0, 0, 0);
   height: 62px;
   flex-grow: 1;
 }
@@ -389,6 +392,9 @@ header .main-menu .item .item__contents .contents__texture p {
 }
 .notice .promotion .swiper-container {
   /* 819px 슬라이드 3개와 그 사이 여백 10px씩 = 2477px */
+  -webkit-backface-visibility:hidden;
+	-webkit-transform:translateZ(0);
+	-webkit-transform:translate3d(0, 0, 0);
   width: calc(819px * 3 + 20px);
   height: 553px;
   position: absolute;

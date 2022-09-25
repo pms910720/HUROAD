@@ -31,12 +31,12 @@ const toTopEl = document.querySelector('#to-top')
 
 // 페이지에 스크롤 이벤트를 추가!
 // 스크롤이 지나치게 자주 발생하는 것을 조절(throttle, 일부러 부하를 줌)
-if(filter.indexOf( navigator.platform.toLowerCase() ) < 0){
+// if(filter.indexOf( navigator.platform.toLowerCase() ) < 0){
 
-  document.querySelector('.succulent').hide()
-  document.querySelector('.cat').hide()
+//   document.querySelector('.succulent').hide()
+//   document.querySelector('.cat').hide()
  
-}
+// }
 
 // 상단으로 스크롤 버튼을 클릭하면,
 toTopEl.addEventListener('click', function () {
